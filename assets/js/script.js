@@ -49,9 +49,14 @@ function decrypt(text) {
    return text;
 }
 
-const text = 'abacaxi';
-let result = encrypt(text);
-let decryptText = '';
+document.getElementById('encrypt').addEventListener('click',function() {
+   const text = document.getElementById('text').value;
 
-console.log(result);
-console.log('descriptografado: ', decrypt(result))
+   document.getElementById('result').innerHTML = encrypt(text);
+})
+
+document.getElementById('decrypt').addEventListener('click',function() {
+   const text = document.getElementById('text').value;
+
+   document.getElementById('result').innerHTML = decrypt(text);
+})
